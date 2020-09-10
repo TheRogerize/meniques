@@ -901,8 +901,8 @@ about
 */
 
 #about {
-  padding: 120px 0px;
-  border-bottom: 1px solid #eee;
+  padding: 70px 0px;
+  background-color: #b7fec4;
 }
 
 @media (max-width: 765px) {
@@ -920,7 +920,9 @@ about
 }
 
 #about2 {
-  padding: 120px 0px;
+  padding: 50px 0px;
+  background-color: #b7fec4;
+  text-align:center;
 }
 
 #about2 .right-image {
@@ -941,7 +943,17 @@ about
 #about2 p {
   margin-bottom: 30px;
   font-size: 16px;
-  line-height: 30px;
+  line-height: 23px;
+  font-weight:500;
+  letter-spacing: 0.5px;
+  color:black;
+}
+#about2 p.quote {
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight:700;
+  font-style: italic;
   letter-spacing: 0.5px;
 }
 
@@ -969,7 +981,7 @@ services
 */
 #services {
   position: relative;
-  padding: 120px 0px 90px 0px;
+  padding: 120px 0px;
   background: rgba(0, 136, 232, 1);
   background: -moz-linear-gradient(
     -45deg,

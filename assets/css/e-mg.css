@@ -100,7 +100,11 @@ figcaption {
   border: 0;
   outline: 0;
 }
-
+.wrapper {
+  position: relative;
+  padding: 0 !important;
+  margin: 0 !important;
+}
 .clearfix:after {
   content: ".";
   display: block;
@@ -204,6 +208,12 @@ body {
   body {
     overflow-x: hidden;
   }
+  .onlyMobile {
+    display: block;
+  }
+  .right-mobileImage {
+    background: none;
+  }
   .mobile-top-fix {
     margin-top: 30px;
     margin-bottom: 0px;
@@ -251,6 +261,29 @@ a.main-button {
 a.main-button:hover {
   background-color: #0088e8;
 }
+a.secondary-button {
+  display: block;
+  font-size: 17px;
+  border-radius: 6px;
+  position: relative;
+  padding: 7px;
+  margin: 10px 0px 0px;
+  font-weight: 700;
+  background-color: #f7a60f;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 0.25px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+a.secondary-button:hover {
+  background-color: #f3a20b;
+  color: white;
+}
+
 
 button.main-button {
   outline: none;
@@ -716,6 +749,15 @@ header
   .header-area .main-nav {
     display: block;
   }
+  .onlyMobile {
+    display: none;
+  }
+  .right-mobileImage {
+    background-image: url('../images/right-image2.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 /* 
@@ -899,10 +941,11 @@ TRY IT ... with or without CENTER CENTER
 about
 ---------------------------------------------
 */
-
+.greenBG {
+  background-color: #b7fec4;
+}
 #about {
   padding: 70px 0px;
-  background-color: #b7fec4;
 }
 
 @media (max-width: 765px) {
@@ -921,7 +964,6 @@ about
 
 #about2 {
   padding: 50px 0px;
-  background-color: #b7fec4;
   text-align:center;
 }
 
@@ -974,6 +1016,67 @@ about
   margin-bottom: 20px;
 }
 
+/*
+Saludos 
+*/
+#saludos {
+  padding: 0px;
+  margin: 0px;
+  text-align:center;
+}
+
+#saludos .right-image {
+  display: block;
+  position:relative;
+  /* height: 100vh;
+  background-image: url('../images/right-image2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; */
+}
+
+#saludos h5 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1e1e1e;
+  line-height: 40px;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+}
+
+#saludos p {
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 23px;
+  font-weight:500;
+  letter-spacing: 0.5px;
+  color:black;
+}
+#saludos p.quote {
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight:700;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+#saludos ul li img {
+  display: inline;
+  float: left;
+}
+
+#saludos ul li .text {
+  margin-left: 80px;
+}
+
+#saludos ul li .text h6 {
+  padding-top: 12px;
+  font-size: 21px;
+  font-weight: 500;
+  color: #1e1e1e;
+  margin-bottom: 20px;
+}
 /* 
 ---------------------------------------------
 services
@@ -1068,11 +1171,9 @@ services
 }
 
 .service-item .icon img {
-  max-width: 50px;
+  max-width: 100%;
+  width: 100%;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .service-item .service-title {
@@ -1086,11 +1187,12 @@ services
 }
 
 .service-item p {
-  font-weight: 400;
-  font-size: 13px;
+  font-weight: 500;
+  font-size: 16px;
+  font-style: italic;
   color: #777;
   letter-spacing: 0.5px;
-  line-height: 25px;
+  line-height: 20px;
   position: relative;
   z-index: 2;
 }
@@ -1127,32 +1229,49 @@ services
 
 .owl-carousel .owl-nav button.owl-next span {
   top: 32%;
+  right: -90px;
   border-radius: 50%;
-  font-size: 36px;
+  font-size: 75px;
   color: #fff;
-  right: -80px;
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
+  width: 70px;
+  height: 70px;
+  line-height: 45px;
   text-align: center;
   display: inline-block;
-  background-color: rgba(250, 250, 250, 0.15);
+  background-color: #f7a60f;
   position: absolute;
+  transition: all .5s;
 }
 
 .owl-carousel .owl-nav button.owl-prev span {
   top: 32%;
+  left: -90px;
   border-radius: 50%;
-  font-size: 36px;
+  font-size: 75px;
   color: #fff;
-  left: -80px;
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
+  width: 70px;
+  height: 70px;
+  line-height: 45px;
   text-align: center;
   display: inline-block;
-  background-color: rgba(250, 250, 250, 0.15);
+  background-color: #f7a60f;
   position: absolute;
+  transition: all .5s;
+}
+
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+.ripple span {
+  background: #f58a26 radial-gradient(circle, transparent 1%, #f58a26 1%) center/15000%;
+  background-size: center/15000%;
+  background-color: transparent;
+}
+.ripple span:hover {
+  background-color: #f7a60f;
+  background-size: 100%;
+  transition: background 2s;
 }
 
 @media screen and (max-width: 1320px) {
@@ -1292,7 +1411,7 @@ contact
 }
 
 .contact-form {
-  padding: 100px;
+  padding: 60px 40px;
   background: rgba(0, 136, 232, 1);
   background: -moz-linear-gradient(
     -45deg,

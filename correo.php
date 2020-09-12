@@ -1,7 +1,8 @@
 <?php
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
-$link = mysqli_connect("localhost", "emgagenc_lmdlc", ";e9*(M0KP3jy", "emgagenc_losmdlc");
+//$link = mysqli_connect("localhost", "emgagenc_lmdlc", ";e9*(M0KP3jy", "emgagenc_losmdlc");
+$link = mysqli_connect("localhost", "root", "Admin123.", "emgagenc_losmdlc");
  
 // Check connection
 if($link === false){

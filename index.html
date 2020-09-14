@@ -80,7 +80,7 @@
                             niños a aprender de manera divertida.</p>
                         <a href="#about" class="main-button-slider">Conócenos</a>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 welcome-image"
                         data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                         <img src="assets/images/slider-icon.png" class="rounded img-fluid d-block mx-auto"
                             alt="First Vector Graphic">
@@ -230,6 +230,7 @@
                 <div class=" left-text col-lg-6 col-md-12 col-sm-12 mobile-bottom-fix wrapper">
                     <div class="contact-form">
                         <form id="contact" action="correo.php" method="post">
+                            <!-- <form id="contact" action="correo.php" method="post"> -->
                             <div class="stepsTexts" id="stepsTexts">
                                 <p class="steps">1-. Suscribete a nuestro canal de <b>YOUTUBE</b></p>
                                 <p class="steps">2-. LLena este formulario:</p>
@@ -238,43 +239,46 @@
                                 <div class="col-lg-12">
                                     <fieldset>
                                         <input name="name" type="text" id="name"
-                                            placeholder="Nombre y Apellido del Meñifriend" required=""
-                                            class="contact-field">
-                                    </fieldset>
+                                            placeholder="Nombre y Apellido del Meñifriend" class="contact-field">
+                                            <div class="inputError nombreError">Debes ingresar un correo valido</div>
+                                        </fieldset>
                                 </div>
                                 <div class="col-lg-12">
                                     <fieldset>
                                         <div class="selectwrap">
                                             <select name="messageid" id="messageid"
                                                 placeholder="Selecciona un Motivo del Saludo">
-                                                <option selected disabled>Selecciona un Motivo del Saludo</option>
+                                                <option selected disabled value="0">Selecciona un Motivo del Saludo</option>
                                                 <!-- Debo cambiar los values de las options para validarlos en el back -->
-                                                <option value="1 Cumpleaños">Cumpleaños</option>
-                                                <option value="2 Saludo Personalizado">Saludo Personalizado</option>
+                                                <option value="1">Cumpleaños</option>
+                                                <option value="2">Saludo Personalizado</option>
                                             </select>
+                                            <div class="inputError motivoError">Debes ingresar un correo valido</div>
                                         </div>
                                         <!-- <input name="messageid" rows="6" id="messageid" placeholder="Motivo del Saludo"
-                                            required="" class="contact-field"></textarea> -->
+                                             class="contact-field"></textarea> -->
                                     </fieldset>
                                 </div>
                                 <div class="col-lg-12">
                                     <fieldset>
-                                        <input name="email" type="text" id="email" placeholder="Correo electrónico"
-                                            required="" class="contact-field">
+                                        <input name="email" type="email" id="email" placeholder="Correo electrónico"
+                                            class="contact-field">
+                                            <div class="inputError emailError">Debes ingresar un correo valido</div>
                                     </fieldset>
                                 </div>
                                 <div class="col-lg-12">
                                     <fieldset>
                                         <textarea name="message" rows="6" id="message"
                                             placeholder="Comentarios y anotaciones especiales: &#10;Fecha del cumpleaños o un mensaje especial para Rossi y Luigi."
-                                            required="" class="contact-field"></textarea>
-                                    </fieldset>
+                                            class="contact-field"></textarea>
+                                            <div class="inputError mensajeError">El mensaje no puede contener mas de 1000 caracteres</div>
+                                        </fieldset>
                                 </div>
 
                                 <div class="col-lg-12">
                                     <div class="formMessage" id="formMessage">
                                         <p class="success">
-                                            Tu saludo ha sido enviado. Rossi y Luigi 
+                                            Tu saludo ha sido enviado. Rossi y Luigi
                                             lo están preparando, en pocos dias lo recibirás
                                             en el correo proporcionado.
                                         </p>
@@ -283,9 +287,10 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="col-lg-12">
+                                <div class="col-lg-12 mt-2 mb-2">
                                     <fieldset>
-                                        <button type="submit" id="form-submit" class="main-button">Enviar</button>
+                                        <a id="form-submit" style="color:white;" class="third-button">Enviar</a>
+                                        <button type="submit">hehe</button>
                                     </fieldset>
                                 </div>
                             </div>

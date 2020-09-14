@@ -284,6 +284,26 @@ a.secondary-button:hover {
   color: white;
 }
 
+a.third-button {
+  position: relative;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  background-color: #f3a20b;
+  text-transform: uppercase;
+  letter-spacing: 0.25px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+a.third-button:hover {
+  background-color: #e79600;
+}
 
 button.main-button {
   outline: none;
@@ -813,7 +833,7 @@ TRY IT ... with or without CENTER CENTER
   margin-bottom: 40px;
   position: relative;
 }
-
+/* 
 @media (max-width: 991px) {
   .welcome-area .header-text {
     top: 55% !important;
@@ -832,9 +852,9 @@ TRY IT ... with or without CENTER CENTER
     color: #fff;
     margin-bottom: 30px;
   }
-}
+} */
 
-@media (max-width: 820px) {
+/* @media (max-width: 820px) {
   .welcome-area .header-text {
     top: 55% !important;
     transform: perspective(1px) translateY(-60%) !important;
@@ -847,14 +867,11 @@ TRY IT ... with or without CENTER CENTER
   .welcome-area .header-text p {
     margin-bottom: 30px;
   }
-}
+} */
+@media (max-width: 520px) {
 
-@media (max-width: 765px) {
-  .welcome-area {
-    /*margin-bottom: 100px;*/
-  }
   .welcome-area .header-text {
-    top: 55% !important;
+    top: 60% !important;
     transform: perspective(1px) translateY(-50%) !important;
     text-align: center;
   }
@@ -863,9 +880,39 @@ TRY IT ... with or without CENTER CENTER
   }
   .welcome-area .header-text h1 {
     font-weight: 600;
-    font-size: 24px !important;
-    line-height: 30px !important;
-    margin-bottom: 20px !important;
+    font-size: 18px ;
+    line-height: 20px ;
+    margin-bottom: 10px ;
+  }
+  .welcome-area .header-text h1 span {
+    color: #fff;
+  }
+  .welcome-area .header-text p {
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 40px;
+  }
+  .welcome-area .header-text img {
+    width: 80%;
+    max-width: 350px;
+    margin-top: 0px;
+  }
+}
+@media (min-width: 521px) {
+  .welcome-area .header-text {
+    top: 65% ;
+    transform: perspective(1px) translateY(-50%) ;
+    text-align: center;
+  }
+ 
+  .welcome-area .header-text h1 {
+    font-size: 20px;
+    line-height: 21px;
+    letter-spacing: 1.4px;
+    margin-bottom: 15px;
+    color: #fff;
   }
   .welcome-area .header-text h1 span {
     color: #fff;
@@ -874,51 +921,99 @@ TRY IT ... with or without CENTER CENTER
     text-align: center;
     color: #fff;
     font-size: 14px;
-    line-height: 22px;
+    line-height: 16px;
     margin-bottom: 40px;
   }
   .welcome-area .header-text img {
     width: 80%;
-    margin-top: 20px;
+    max-width: 300px;
+    margin-top: 0px;
   }
 }
-@media (min-width: 766px) {
-  .welcome-area .header-text h1 {
-    font-size: 40px;
-    line-height: 45px;
-    letter-spacing: 1.4px;
-    margin-bottom: 30px;
-    color: #fff;
+@media (min-width: 768px) {
+  .welcome-area {
+    /*margin-bottom: 100px;*/
   }
-}
-@media (min-width: 1168px) {
+  .welcome-area .header-text {
+    top: 55% ;
+    transform: perspective(1px) translateY(-50%) ;
+    text-align: left;
+  }
+  .welcome-area .header-text .buttons {
+    display: none;
+  }
   .welcome-area .header-text h1 {
-    font-size: 40px;
-    line-height: 45px;
-    letter-spacing: 1.4px;
-    margin-bottom: 30px;
-    color: #fff;
+    font-weight: 600;
+    font-size: 35px ;
+    line-height: 40px ;
+    margin-bottom: 10px ;
   }
   .welcome-area .header-text p {
-    font-size: 20px;
+    font-size: 15px ;
+    line-height: 19px ;
     letter-spacing: 0.25px;
     margin-bottom: 40px;
     position: relative;
+    text-align: left;
+  }
+  .welcome-area .header-text img {
+    width: 100%;
+    max-width:100%;
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: 1168px) {
+  .welcome-area .header-text {
+    top: 55% ;
+    transform: perspective(1px) translateY(-50%) ;
+    text-align: left;
+  }
+  .welcome-area .header-text h1 {
+    font-size: 40px ;
+    line-height: 45px ;
+    letter-spacing: 1.4px ;
+    margin-bottom: 30px ;
+    color: #fff ;
+  }
+  .welcome-area .header-text p {
+    font-size: 20px ;
+    line-height: 25px ;
+    letter-spacing: 0.25px;
+    margin-bottom: 40px;
+    position: relative;
+    text-align: left;
+  }
+  .welcome-area .header-text img {
+    width: 100%;
+    margin-top: 20px;
+    max-width: 100%;
   }
 }
 @media (min-width: 1366px) {
+  .welcome-area .header-text {
+    text-align: left;
+  }
   .welcome-area .header-text h1 {
     font-size: 45px;
+    font-weight: 500;
     line-height: 50px;
     letter-spacing: 1.4px;
-    margin-bottom: 0px;
+    margin-bottom: 15px;
     color: #fff;
   }
   .welcome-area .header-text p {
     font-size: 18px;
+    line-height: 28px;
     letter-spacing: 0.25px;
     margin-bottom: 40px;
+    text-align: left;
     position: relative;
+  }
+  .welcome-area .header-text img {
+    width: 100%;
+    margin-top: 0px;
+    max-width: 100%;
   }
 }
 @media (min-width: 1599px) {
@@ -1492,6 +1587,8 @@ p.contact-text {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  -webkit-transition: all .25s;
+  transition: all .25s;
   margin-bottom: 15px;
 }
 .contact-form .selectwrap {
@@ -1527,6 +1624,8 @@ p.contact-text {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  -webkit-transition: all .25s;
+  transition: all .25s;
 }
 .contact-form select option{
   color: #777;
@@ -1620,7 +1719,7 @@ p.contact-text {
   .contact-form input,
   .contact-form select,
   .contact-form textarea {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     font-style: italic;
     color: #777;
@@ -1631,7 +1730,7 @@ p.contact-text {
   .contact-form input::placeholder,
   .contact-form select::placeholder,
   .contact-form textarea::placeholder {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     font-style: italic;
     color: rgb(121, 146, 158);
@@ -1676,7 +1775,8 @@ p.contact-text {
   text-align: center;
   position: relative;
   min-height: 60px;
-  display: block;
+  /* display: block; */
+  display: none;
 }
 #formMessage p.success {
   font-size: 17px;
@@ -1687,6 +1787,21 @@ p.contact-text {
   font-size: 17px;
   color: #fcff4bed;
   font-weight: 700;
+}
+.inputError {
+  position: relative;
+  display: none;
+  height: 30px;
+  margin: 0px auto 10px;
+  text-align: center;
+  color: #fcff4bed;
+  font-weight: 500;
+  line-height: 15px;
+  font-size: 14px;
+}
+
+input.invalid, select.invalid, textarea.invalid {
+  background: rgb(253, 212, 208);
 }
 /* 
 ---------------------------------------------

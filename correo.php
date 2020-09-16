@@ -100,7 +100,6 @@ $sql = "INSERT INTO cliente (name, email, pais, messageid, message) VALUES (?, ?
 $stmt = $link->prepare($sql);
 $stmt->bind_param("sssss", $name, $email, $pais, $motivoText, $message);
 if($stmt->execute()) {
-    // echo "Success";
     $destinatario = "losmeniquesdelacasa@gmail.com";
     $asunto = "$curso";
     $carta = "Nombre: $name \n";

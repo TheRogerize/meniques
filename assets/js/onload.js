@@ -128,14 +128,11 @@ $(document).ready(function () {
         $(inputMensaje).val("");
     }
     $("#form-submit").on('click', function (e) {
-
         const nombre = $("#name").val();
         const motivo = $("select#messageid").children("option:selected").val();
         const email = $("#email").val();
         const mensaje = $("#message").val();
         const arrayy = [nombre, motivo, email, mensaje];
-        console.log(arrayy);
-        //TEMPORAL PARA PRUEBAS DE BACK
         validateForm(nombre, motivo, email, mensaje);
         if (errors == 0) {
             const formData = {
@@ -144,7 +141,6 @@ $(document).ready(function () {
                 messageid: motivo,
                 message: mensaje
             }
-            console.log(formData);
             e.preventDefault();
             $.ajax({
                 type: "POST",
@@ -155,18 +151,15 @@ $(document).ready(function () {
                 dataType: 'json',
                 success: function (result) {
                     if (result[0].error) {
-                        console.log(result[0].error);
                         $("#errorMsg").fadeIn(300);
                         $("#errorMsg").text(result[0].error);
                     }
                     if (result[0].success) {
-                        console.log(result[0].success);
                         $("#errorMsg").fadeOut(0);
                         $("#submitButton").fadeOut(0);
                         $("#successMsg").fadeIn(300);
                         cleanForm();
                     }
-                    // see attached image how to get the path for object
                 },
                 error: function (result) {
                     alert("Ocurrió un error con el servidor, intente más tarde");

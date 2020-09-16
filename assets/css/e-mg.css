@@ -1774,17 +1774,18 @@ p.contact-text {
 #formMessage {
   text-align: center;
   position: relative;
-  min-height: 60px;
+  height: auto;
   /* display: block; */
-  display: none;
 }
 #formMessage p.success {
   font-size: 17px;
   color: rgb(255, 255, 255);
   font-weight: 700;
+  display:none;
 }
 #formMessage p.error {
   font-size: 17px;
+  display:none;
   color: #fcff4bed;
   font-weight: 700;
 }

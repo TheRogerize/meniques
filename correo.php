@@ -6,7 +6,7 @@ function set_Motivo($motivo) {
     $selected = "";
     switch($motivo) {
         case "1": 
-            $selected = utf8_decode("Cumpleaños");
+            $selected = "Cumpleaños";
         break;
         case "2": 
             $selected = "Saludo Personalizado";
@@ -63,7 +63,8 @@ function validateForm($name, $email, $motivo, $message) {
     } 
 }
 
-$link = mysqli_connect("localhost", "root", "Admin123", "emgagenc_losmdlc");
+// $link = mysqli_connect("localhost", "root", "Admin123", "emgagenc_losmdlc");
+$link = mysqli_connect("localhost", "emgagenc_lmdlc", ";e9*(M0KP3jy", "emgagenc_losmdlc");
 // Check connection
 if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
@@ -86,11 +87,11 @@ $curso = "Saludo de los meniques";
 // $message = mysqli_real_escape_string($link, $_POST['message']);
 // $pais = mysqli_real_escape_string($link, $paisdata);
 
-$name = $_POST['name'];
-$email = $_POST['email'];
-$messageid = $_POST['messageid'];
-$motivoText = set_Motivo($messageid);
-$message = $_POST['message'];
+$name = utf8_decode($_POST['name']);
+$email = utf8_decode($_POST['email']);
+$messageid = utf8_decode($_POST['messageid']);
+$motivoText = utf8_decode(set_Motivo($messageid));
+$message = utf8_decode($_POST['message']);
 $pais = mysqli_real_escape_string($link, $paisdata);
 validateForm($name, $email, $messageid, $message);
 
@@ -107,10 +108,10 @@ if($stmt->execute()) {
     $carta .= "Motivo: $motivoText \n";
     $carta .= "Mensaje: $message \n";
     $carta .= "Ubicacion: $paisdata";
+    mail($destinatario, $asunto, $carta);
     $success[] = array(
-        "success" => "success");
-        echo json_encode($success);
-// mail($destinatario, $asunto, $carta);
+    "success" => "success");
+    echo json_encode($success);
 // echo "CORREO ENVIADO";
 //header('location:https://losmeniquesdelacasa.com');
      exit();

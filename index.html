@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="Template Mo">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
-    <link rel='icon' href='./assets/images/favicon.ico' type='image/x-icon'/ >
+    <link rel='icon' href='./assets/images/favicon.ico' type='image/x-icon' />
     <title>LOS MENIQUES DE LA CASA</title>
 
     <!-- Additional CSS Files -->
@@ -48,9 +48,9 @@
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#welcome">INICIO</a></li>
                             <li class="scroll-to-section"><a href="#about">CONÓCENOS</a></li>
-                            <li class="scroll-to-section"><a href="#services">VIDEO</a></li>
-                            <li class="scroll-to-section"><a href="#frequently-question">QUIERES UN SALUDO</a></li>
-                            <li class="scroll-to-section"><a href="#contact-us">CONTACTANOS</a></li>
+                            <li class="scroll-to-section"><a href="#services">VIDEOS</a></li>
+                            <li class="scroll-to-section"><a href="#saludos">QUIERES UN SALUDO</a></li>
+                            <li class="scroll-to-section"><a href="#contactanos">CONTÁCTANOS</a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -188,27 +188,30 @@
                 <div class="owl-carousel owl-theme">
                     <div class="item service-item">
                         <div class="icon">
-                            <i><img src="assets/images/service-icon-01.png" alt=""></i>
+                            <i><img src="assets/images/elbailedelsapito.jpg" alt=""></i>
                         </div>
                         <h5 class="service-title">EL BAILE DEL SAPITO</h5>
                         <p>Un sapito muy divertido nos hace bailar con un ritmo renovado.</p>
-                        <a href="#" class="secondary-button">VER EN YOUTUBE</a>
+                        <a href="https://www.youtube.com/watch?v=jNZQaZySAdw" target="_blank"
+                            class="secondary-button">VER EN YOUTUBE</a>
                     </div>
                     <div class="item service-item">
                         <div class="icon">
-                            <i><img src="assets/images/service-icon-02.png" alt=""></i>
+                            <i><img src="assets/images/tabladel9.jpg" alt=""></i>
                         </div>
                         <h5 class="service-title">LA TABLA DEL 9</h5>
                         <p>Nuestro reto de baile, ¿Crees que puedas lograrlo? Y a la vez aprender la tabla del 9 </p>
-                        <a href="#" class="secondary-button">VER EN YOUTUBE</a>
+                        <a href="https://www.youtube.com/watch?v=e-jDc4dqb8I" target="_blank"
+                            class="secondary-button">VER EN YOUTUBE</a>
                     </div>
                     <div class="item service-item">
                         <div class="icon">
-                            <i><img src="assets/images/service-icon-03.png" alt=""></i>
+                            <i><img src="assets/images/tabladel3.jpg" alt=""></i>
                         </div>
                         <h5 class="service-title">LA TABLA DEL 3</h5>
                         <p>Un viaje por la selva, en el que te aprenderas la tabla del 3</p>
-                        <a href="#" class="secondary-button">VER EN YOUTUBE</a>
+                        <a href="https://www.youtube.com/watch?v=mUnW28gx8Po" target="_blank"
+                            class="secondary-button">VER EN YOUTUBE</a>
                     </div>
                 </div>
             </div>
@@ -232,7 +235,9 @@
                         <form id="contact" method="post">
                             <!-- <form id="contact" action="correo.php" method="post"> -->
                             <div class="stepsTexts" id="stepsTexts">
-                                <p class="steps">1-. Suscribete a nuestro canal de <b>YOUTUBE</b></p>
+                                <p class="steps">1-. Suscribete a nuestro canal de <a target="_blank" id="youtubeLink"
+                                        href="https://www.youtube.com/c/LosMe%C3%B1iquesDeLaCasa/featured">YOUTUBE</a>
+                                </p>
                                 <p class="steps">2-. LLena este formulario:</p>
                             </div>
                             <div class="row formBox">
@@ -240,15 +245,16 @@
                                     <fieldset>
                                         <input name="name" type="text" id="name"
                                             placeholder="Nombre y Apellido del Meñifriend" class="contact-field">
-                                            <div class="inputError nombreError">Debes ingresar un correo valido</div>
-                                        </fieldset>
+                                        <div class="inputError nombreError">Debes ingresar un correo valido</div>
+                                    </fieldset>
                                 </div>
                                 <div class="col-lg-12">
                                     <fieldset>
                                         <div class="selectwrap">
                                             <select name="messageid" id="messageid"
                                                 placeholder="Selecciona un Motivo del Saludo">
-                                                <option selected disabled value="0">Selecciona un Motivo del Saludo</option>
+                                                <option selected disabled value="0">Selecciona un Motivo del Saludo
+                                                </option>
                                                 <!-- Debo cambiar los values de las options para validarlos en el back -->
                                                 <option value="1">Cumpleaños</option>
                                                 <option value="2">Saludo Personalizado</option>
@@ -263,7 +269,7 @@
                                     <fieldset>
                                         <input name="email" type="email" id="email" placeholder="Correo electrónico"
                                             class="contact-field">
-                                            <div class="inputError emailError">Debes ingresar un correo valido</div>
+                                        <div class="inputError emailError">Debes ingresar un correo valido</div>
                                     </fieldset>
                                 </div>
                                 <div class="col-lg-12">
@@ -271,8 +277,9 @@
                                         <textarea name="message" rows="6" id="message"
                                             placeholder="Comentarios y anotaciones especiales: &#10;Fecha del cumpleaños o un mensaje especial para Rossi y Luigi."
                                             class="contact-field"></textarea>
-                                            <div class="inputError mensajeError">El mensaje no puede contener mas de 1000 caracteres</div>
-                                        </fieldset>
+                                        <div class="inputError mensajeError">El mensaje no puede contener mas de 1000
+                                            caracteres</div>
+                                    </fieldset>
                                 </div>
 
                                 <div class="col-lg-12">
@@ -300,18 +307,94 @@
             </div>
         </div>
     </section>
+    <section id="contactanos">
+        <div class="container py-4">
+            <div class="row justify-content-between">
+                <div class="col-md-12 col-sm-12 text-center">
+                    <h2>Contáctanos</h2>
+                </div>
+                <div class="col-lg-4 col-md-5 col-sm-12 mb-4">
+                    <div class="row text-center">
+                        <div class="col-lg-12 mb-1">
+                            <h5>
+                                Contrataciones
+                            </h5>
+                        </div>
+                        <div class="col-lg-12 mb-3">
+                            <p>
+                                Romar Melendez
+                            </p>
+                            <p>
+                                +52 55 8506 8853
+                            </p>
+                        </div>
+                        <div class="col-lg-12">
+                            <p>
+                                contacto@losmeñiquesdelacasa.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="col-lg-4 col-md-5 col-sm-12 mb-2">
+                    <div class="row text-center justify-content-center">
+                        <div class="col-lg-12">
+                            <h5>
+                                Redes Sociales
+                            </h5>
+                        </div>
+                        <div class="col-lg-8 justify-content-center">
+                            <div class="socialMedia mb-3 align-items-center ">
+                                <a class="icon" href="">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a class="icon" href="">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                                <a class="icon" href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path fill="#333635"
+                                                d="M20.023 18.111v-1.703a13.17 13.17 0 0 0-1.784-.13c-7.3 0-13.239 5.94-13.239 13.24 0 4.478 2.238 8.442 5.652 10.839a13.187 13.187 0 0 1-3.555-9.014c0-7.196 5.77-13.064 12.926-13.232" />
+                                            <path fill="#333635"
+                                                d="M20.335 37.389c3.257 0 5.914-2.591 6.035-5.82l.011-28.825h5.266a9.999 9.999 0 0 1-.17-1.825h-7.192l-.012 28.826c-.12 3.228-2.778 5.818-6.034 5.818a6.006 6.006 0 0 1-2.805-.694 6.037 6.037 0 0 0 4.901 2.52M41.484 12.528v-1.602a9.943 9.943 0 0 1-5.449-1.62 10.011 10.011 0 0 0 5.45 3.222" />
+                                            <path fill="#333635"
+                                                d="M36.035 9.305a9.962 9.962 0 0 1-2.461-6.56h-1.927a10.025 10.025 0 0 0 4.388 6.56M18.239 23.471a6.053 6.053 0 0 0-6.046 6.046 6.05 6.05 0 0 0 3.24 5.352 6.007 6.007 0 0 1-1.144-3.526 6.053 6.053 0 0 1 6.046-6.047c.623 0 1.22.103 1.784.28v-7.343a13.17 13.17 0 0 0-1.784-.13c-.105 0-.208.006-.312.008v5.64a5.944 5.944 0 0 0-1.784-.28" />
+                                            <path fill="#333635"
+                                                d="M41.484 12.528v5.59c-3.73 0-7.185-1.193-10.007-3.218v14.617c0 7.3-5.938 13.239-13.238 13.239-2.821 0-5.437-.89-7.587-2.4a13.201 13.201 0 0 0 9.683 4.225c7.3 0 13.239-5.939 13.239-13.238V16.726a17.107 17.107 0 0 0 10.007 3.218V12.75c-.72 0-1.42-.078-2.097-.223" />
+                                            <path fill="#333635"
+                                                d="M31.477 29.517V14.9a17.103 17.103 0 0 0 10.007 3.218v-5.59a10.011 10.011 0 0 1-5.449-3.223 10.025 10.025 0 0 1-4.388-6.56h-5.266L26.37 31.57c-.121 3.228-2.778 5.819-6.035 5.819a6.038 6.038 0 0 1-4.901-2.52 6.05 6.05 0 0 1-3.241-5.352 6.053 6.053 0 0 1 6.046-6.046c.622 0 1.219.102 1.784.28v-5.64c-7.156.168-12.926 6.036-12.926 13.232 0 3.48 1.352 6.648 3.555 9.014a13.16 13.16 0 0 0 7.587 2.399c7.3 0 13.238-5.939 13.238-13.239" />
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="row justify-content-center">
+                                <a id="ytWrapper" target="_blank"
+                                    href="https://www.youtube.com/channel/UC4SVXIfxAWDE-3ZBIyvgg8Q">
+                                    <div class="col-lg-12 youtube justify-content-center">
+                                        <img src="./assets/images/youtube.png" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
 
     <!-- ***** Footer Start ***** -->
     <footer>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-7 col-md-12 col-sm-12">
-                    <p class="copyright">Copyright &copy; LOS MEÑIQUES DE LA CASA
-
-                        . Design: <a rel="nofollow" href="https://e-mgagency.com">E-MG AGENCY</a></p>
+            <div class="row text-center">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <p class="copyright">Copyright &copy; Los Meñiques De La Casa 2020.</p>
                 </div>
-                <div class="col-lg-5 col-md-12 col-sm-12">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <p class="copyright">Design: <a rel="nofollow" target="_blank" href="https://e-mgagency.com">E-MG AGENCY</a></p>
+                </div>
+                <!-- <div class="col-lg-5 col-md-12 col-sm-12">
                     <ul class="social">
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -319,7 +402,7 @@
                         <li><a href="#"><i class="fa fa-rss"></i></a></li>
                         <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
                     </ul>
-                </div>
+                </div> -->
             </div>
         </div>
     </footer>

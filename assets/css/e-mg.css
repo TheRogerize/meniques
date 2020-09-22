@@ -32,6 +32,8 @@ font & reset css
 --------------------------------------------- 
 */
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900");
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 /* 
 ---------------------------------------------
 reset
@@ -230,7 +232,8 @@ a.main-button-slider {
   font-size: 13px;
   border-radius: 20px;
   padding: 12px 20px;
-  background-color: #0088e8;
+  /* background-color: #0088e8; */
+  background-color: #f3a20b;
   text-transform: uppercase;
   color: #fff;
   letter-spacing: 0.25px;
@@ -241,6 +244,7 @@ a.main-button-slider {
 }
 
 a.main-button-slider:hover {
+  background-color: #e79600;
   color: white;
 }
 
@@ -248,7 +252,7 @@ a.main-button {
   font-size: 13px;
   border-radius: 20px;
   padding: 12px 20px;
-  background-color: #00b4c6;
+  background-color: #f3a20b;
   text-transform: uppercase;
   color: #fff;
   letter-spacing: 0.25px;
@@ -259,7 +263,9 @@ a.main-button {
 }
 
 a.main-button:hover {
-  background-color: #0088e8;
+  /* background-color: #0088e8; */
+  background-color: #e79600;
+  color: white;
 }
 a.secondary-button {
   display: block;
@@ -312,7 +318,8 @@ button.main-button {
   font-size: 13px;
   border-radius: 20px;
   padding: 10px 20px;
-  background-color: #f55858;
+  /* background-color: #f55858; */
+  background-color: #f3a20b;
   text-transform: uppercase;
   color: #fff;
   letter-spacing: 0.25px;
@@ -323,7 +330,8 @@ button.main-button {
 }
 
 button.main-button:hover {
-  background-color: #0088e8;
+  /* background-color: #0088e8; */
+  background-color: #e79600;
 }
 
 .section-heading h2 {
@@ -1268,6 +1276,7 @@ services
 .service-item .icon img {
   max-width: 100%;
   width: 100%;
+  border-radius:100%;
   position: absolute;
 }
 
@@ -1297,6 +1306,121 @@ services
   display: inline-block;
 }
 
+#contactanos {
+  position: relative;
+  background-color: #f3a20a;
+}
+
+#contactanos h2 {
+  color: white;
+  letter-spacing: .35ch;
+  font-weight: 700;
+  font-family: 'Annie Use Your Telescope', cursive;
+  font-family: 'Indie Flower', cursive;
+  margin-bottom: 0px;
+}
+@media screen and (max-width: 720px) {
+  #contactanos h2 {
+    font-size: 2.2em;
+    line-height: 38px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 721px) {
+  #contactanos h2 {
+    font-size: 3em;
+    line-height: 48px;
+  }
+}
+#contactanos h5 {
+  color: rgb(44, 44, 44);
+  font-weight: 700;
+  font-size: 1.4em;
+  
+}
+#contactanos p {
+  color: rgb(44, 44, 44);
+  font-weight: 600;
+  word-wrap: wrap;
+  word-wrap: break-word;
+  padding: 0px;
+  margin: 0px;
+  font-size: 1.2em;
+}
+
+#ytWrapper {
+  position: relative;
+  box-sizing: border-box;
+}
+#contactanos .socialMedia {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  grid-gap: 15px;
+  align-items: center;
+}
+
+#contactanos a.icon  {
+  position: relative;
+  border: 2px solid rgb(44, 44, 44);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  box-sizing: border-box;
+  align-items: center;
+  min-width: 45px;
+  min-height:45px;
+  color: rgb(44, 44, 44);
+}
+#contactanos a.icon i {
+  font-size: 2em;
+}
+#contactanos a.icon svg {
+  width: 30px;
+  height: 30px;
+}
+@media screen and (max-width: 720px) {
+  #contactanos a.icon  {
+    padding: 5px 12.5px;
+    color: rgb(44, 44, 44);
+    min-width: 25px;
+    min-height:25px;
+  }
+  #contactanos a.icon i {
+    font-size: 1.7em;
+  }
+  #contactanos a.icon svg {
+    width: 25px;
+    height: 25px;
+  }
+}
+@media screen and (min-width: 721px) {
+  #contactanos a.icon  {
+    min-width: 45px;
+    min-height:45px;
+  }
+  #contactanos a.icon i {
+    font-size: 2em;
+  }
+  #contactanos a.icon svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+#contactanos .youtube {
+  border: 2px solid rgb(44, 44, 44);
+  border-radius: 100px;
+  position: relative;
+  box-sizing: border-box;
+}
+#contactanos .youtube img {
+  filter: grayscale(1);
+  width: 150px;
+  padding: 0px;
+  margin: 0px;
+}
 .owl-carousel .owl-dots {
   margin-top: 60px;
   text-align: center;
@@ -1555,8 +1679,12 @@ p.contact-text {
   text-transform: uppercase;
   color: white;
 }
-.contact-form p b {
+.contact-form p a {
   color: rgb(211, 211, 250);
+  text-decoration: underline;
+}
+a#youtubeLink {
+  text-decoration: underline !important;
 }
 @media (max-width: 765px) {
   #stepsTexts p {
@@ -1810,7 +1938,7 @@ footer
 --------------------------------------------- 
 */
 footer {
-  background-color: #fff;
+  background-color: rgb(19, 19, 19);
   padding: 60px 0px;
 }
 
@@ -1847,9 +1975,9 @@ footer .social li a:hover {
 
 footer .copyright {
   margin-top: 10px;
-  font-weight: 400;
-  font-size: 15px;
-  color: #4a4a4a;
+  font-weight: 700;
+  font-size: 17px;
+  color: white;
   letter-spacing: 0.88px;
   text-transform: capitalize;
 }

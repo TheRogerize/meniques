@@ -34,6 +34,19 @@ font & reset css
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900");
 @import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+
+@font-face {
+	font-family: 'Bayu';
+	src: url('../fonts/BayuPrahara2_BoldItalic.otf'); 
+	src: 
+		local('Bayu Prahara Bold Italic'),
+		local('Bayu-Prahara-Bold-Italic'),
+		url('../fonts/BayuPrahara2_BoldItalic.otf') 
+    format('opentype');
+    font-weight: bold;
+}
+
 /* 
 ---------------------------------------------
 reset
@@ -215,6 +228,7 @@ body {
   }
   .right-mobileImage {
     background: none;
+    display: block;
   }
   .mobile-top-fix {
     margin-top: 30px;
@@ -227,7 +241,12 @@ body {
     margin-bottom: 60px;
   }
 }
-
+@media (min-width: 992px) {
+  .right-mobileImage {
+    background: none;
+    display: none;
+  }
+}
 a.main-button-slider {
   font-size: 13px;
   border-radius: 20px;
@@ -1128,16 +1147,75 @@ Saludos
   text-align:center;
 }
 
-#saludos .right-image {
-  display: block;
-  position:relative;
-  /* height: 100vh;
-  background-image: url('../images/right-image2.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center; */
-}
+@media screen and (max-width: 991px) {
+  #saludos .leftText {
+    position: relative;
+    display: none;
 
+  }
+}
+@media screen and (min-width: 992px) {
+  #saludos .leftText {
+    position: relative;
+    display: block;
+    margin: 70px 0% 0px 10%;
+  }
+}
+#saludos .leftText h2 {
+  font-size: 1.6em;
+  font-family: 'Bayu', sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  display: block;
+  text-align: left; 
+  color: #d656c9; 
+  margin: 0px;
+}
+#saludos .leftText p {
+  font-size: 1.35em;
+  font-family: 'Indie Flower', cursive;
+  font-weight: 800;
+  text-align: left;
+  padding-left: 0px;  
+  color: rgb(32, 32, 32);
+  margin: 0px;
+}
+#saludos .leftText b {
+  position: absolute;
+  left: -8px;
+  top: -10px;
+  writing-mode: vertical-lr;
+  -webkit-transform: rotate(-260deg);
+  -moz-transform: rotate(-260deg);
+}
+@media screen and (max-width: 991px) {
+  #saludos .right-image {
+    display: block;
+    position:relative;
+    /* height: 100vh;
+    background-image: url('../images/right-image2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+  }
+  #saludos .deskImage {
+    display: none;
+  }
+}
+@media screen and (min-width: 992px) {
+  #saludos .right-image {
+    display: none;
+    position: relative;
+  }
+  #saludos .deskImage {
+    display: block;
+    min-height: 100%;
+    background-image: url('../images/saludo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
 #saludos h5 {
   font-size: 26px;
   font-weight: 700;
@@ -1229,6 +1307,12 @@ services
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0088e8', endColorstr='#0088e8', GradientType=1 );
 }
 
+#services h2 {
+  font-size: 3.2em;
+  font-weight: 700;
+  color: white;
+}
+
 .service-item {
   cursor: pointer;
   display: block;
@@ -1315,7 +1399,6 @@ services
   color: white;
   letter-spacing: .35ch;
   font-weight: 700;
-  font-family: 'Annie Use Your Telescope', cursive;
   font-family: 'Indie Flower', cursive;
   margin-bottom: 0px;
 }
